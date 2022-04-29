@@ -1,0 +1,11 @@
+---
+- hosts: 192.168.159.134  192.168.159.133
+  become: true
+  remote_user: root
+  tasks:
+  - name: create a file
+    file:
+     name: Hello.txt
+     dest: /root
+     mode: 0700
+     state: touch
